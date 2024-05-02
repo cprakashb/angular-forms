@@ -8,8 +8,33 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ProjectLocationComponent {
   form = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    sizeOfArea: ['', Validators.required],
+    unit: ['', Validators.required],
+    physicalAddress: ['', Validators.required],
+    city: ['', Validators.required],
+    country: ['', Validators.required],
+    subDivision: ['', Validators.required],
+    section: ['', Validators.required],
+    township: ['', Validators.required],
+    range: ['', Validators.required]
   });
+
+
+  units = [{
+    key: 'Square Feet',
+    value: 'sq.ft'
+  }, {
+    key: 'Square Meters',
+    value: 'sq.mtrs'
+  },
+  {
+    key: 'Acres',
+    value: 'acres'
+  },
+  {
+    key: 'hectares',
+    value: 'hectares'
+  }]
 
   constructor(
     private _formBuilder: FormBuilder,
