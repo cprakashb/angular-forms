@@ -8,8 +8,20 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class BillingInfoComponent {
   form = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    givenName: ['', Validators.required],
+    middleName: ['', Validators.required],
+    surname: ['', Validators.required],
+    street: ['', Validators.required],
+    city: ['', Validators.required],
+    state: ['', Validators.required],
+    postalCode: ['', Validators.required],
+    country: ['', Validators.required],
+    homePhone: ['', Validators.required],
+    busPhone: ['', Validators.required],
+    email: ['', Validators.required],
+    preferredMethodOfContact: ['', Validators.required]
   });
+
 
   constructor(
     private _formBuilder: FormBuilder,
