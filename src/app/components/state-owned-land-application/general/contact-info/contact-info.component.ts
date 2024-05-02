@@ -8,7 +8,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactInfoComponent {
   form = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    givenName: ['', Validators.required],
+    middleName: ['', Validators.required],
+    surname: ['', Validators.required],
+    inCorpName: ['', Validators.required],
+    street: ['', Validators.required],
+    city: ['', Validators.required],
+    state: ['', Validators.required],
+    postalCode: ['', Validators.required],
+    country: ['', Validators.required],
+    homePhone: ['', Validators.required],
+    busPhone: ['', Validators.required],
+    email: ['', Validators.required],
+    preferredMethodOfContact: ['', Validators.required]
   });
 
   constructor(
