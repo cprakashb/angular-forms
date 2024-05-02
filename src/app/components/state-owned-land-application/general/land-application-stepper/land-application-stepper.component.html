@@ -1,0 +1,32 @@
+
+<section class="bg-white stepper-container m-3">
+<mat-stepper
+  class="land-app-stepper"
+  [orientation]="(stepperOrientation | async)!">
+  <mat-step [stepControl]="applicationDetailsForm" label="Application Details">
+    <app-application-details/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Applicant Contact Information">
+    <app-contact-info/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Billing Information">
+    <app-billing-info/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Project Location">
+    <app-project-location/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Project Summary & Notification">
+    <app-project-summary/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Question List">
+    <app-questions-list/>
+  </mat-step>
+  <mat-step [stepControl]="contactInfoForm" label="Application Fees">
+    <app-application-fee/>
+    <div class="d-flex gap-3">
+    <button mat-stroked-button matStepperPrevious >Back</button>
+    <button mat-flat-button color="primary" (click)="submit()">Submit</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+</section>
