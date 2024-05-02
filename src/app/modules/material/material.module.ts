@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatRadioModule } from '@angular/material/radio';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -24,8 +26,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatDatepickerModule
-
+    MatDatepickerModule,
+    MatRadioModule
   ],
   exports: [
     MatToolbarModule,
@@ -38,7 +40,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
