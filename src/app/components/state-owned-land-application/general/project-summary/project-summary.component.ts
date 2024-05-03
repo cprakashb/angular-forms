@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ProjectSummaryComponent {
   form = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    summary: ['', Validators.required],
   });
 
   constructor(

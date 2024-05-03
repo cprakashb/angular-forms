@@ -1,7 +1,17 @@
-<form [formGroup]="form">
-  <mat-form-field>
-    <mat-label>Application Details</mat-label>
-    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+<p>
+  Provide a brief summary of the proposed use in narrative and on drawing,
+   including the location, intended use, any structures or improvements,
+    and any disturbance including removal or fill of material. Submit ONE (1)
+    original of the narrative and drawings. Additional copies of submitted documents
+    may be requested at a later date. Drawings should be accurate, to scale and show appropriate detail.
+</p>
+<p> Note: For leases and easements, accurate legal descriptions are required.</p>
+
+<form [formGroup]="form" class="mt-3 d-grid gap-3">
+  <mat-form-field class="summary-textarea w-100" appearance="outline" [floatLabel]="'always'">
+    <mat-label>Comments</mat-label>
+    <textarea matInput rows="10"
+      formControlName="summary"></textarea>
   </mat-form-field>
   <div class="d-flex gap-3 ms-auto">
     <button mat-stroked-button color="primary" matStepperPrevious>Back</button>

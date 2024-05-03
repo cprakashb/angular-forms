@@ -7,6 +7,9 @@ import { map } from 'rxjs/operators';
 import { ApplicationDetailsComponent } from '../application-details/application-details.component';
 import { ContactInfoComponent } from '../contact-info/contact-info.component';
 import { BillingInfoComponent } from '../billing-info/billing-info.component';
+import { ProjectLocationComponent } from '../project-location/project-location.component';
+import { ProjectSummaryComponent } from '../project-summary/project-summary.component';
+import { QuestionsListComponent } from '../questions-list/questions-list.component';
 
 
 @Component({
@@ -22,11 +25,12 @@ export class LandApplicationStepperComponent {
 
   @ViewChild(BillingInfoComponent, { static: true }) billingInfo?: BillingInfoComponent;
 
+  @ViewChild(ProjectLocationComponent, { static: true }) projectLocation?: ProjectLocationComponent;
 
+  @ViewChild(ProjectSummaryComponent, { static: true }) projectSummary?: ProjectSummaryComponent;
 
-  thirdFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required],
-  });
+  @ViewChild(QuestionsListComponent, { static: true }) questionsList?: QuestionsListComponent;
+
   stepperOrientation: Observable<StepperOrientation>;
 
   constructor(
@@ -34,7 +38,7 @@ export class LandApplicationStepperComponent {
     breakpointObserver: BreakpointObserver,
   ) {
     this.stepperOrientation = breakpointObserver
-      .observe('(min-width: 800px)')
+      .observe('(min-width: 992px)')
       .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
   }
   get applicationDetailsForm(): FormGroup {
@@ -52,9 +56,13 @@ export class LandApplicationStepperComponent {
   }
 
 
-  submit(){
+  submit() {
     console.log(this.applicationDetails?.form.value);
     console.log(this.contactInfo?.form.value);
+    console.log(this.billingInfo?.form.value);
+    console.log(this.projectLocation?.form.value);
+    console.log(this.projectSummary?.form.value);
+    console.log(this.questionsList?.form.value);
 
 
   }

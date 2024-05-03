@@ -29,10 +29,10 @@
     <div class="col-12 col-md-6 mb-4 mb-sm-2 mb-md-3 mb-lg-0">
       <mat-form-field [floatLabel]="'always'" appearance="outline" class="w-100">
         <mat-label>Submission date</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="submissionDate">
+        <input matInput [matDatepicker]="submissionDate" formControlName="submissionDate">
         <mat-hint>Submission Date will be auto populated once application is submitted</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <mat-datepicker-toggle matIconSuffix [for]="submissionDate"></mat-datepicker-toggle>
+        <mat-datepicker #submissionDate></mat-datepicker>
       </mat-form-field>
     </div>
   </div>
@@ -40,17 +40,17 @@
     <div class="col-12 col-md-6">
       <mat-form-field [floatLabel]="'always'" appearance="outline" class="w-100">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="proposedStartDate">
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [matDatepicker]="proposedStartDate" formControlName="proposedStartDate">
+        <mat-datepicker-toggle matIconSuffix [for]="proposedStartDate"></mat-datepicker-toggle>
+        <mat-datepicker #proposedStartDate></mat-datepicker>
       </mat-form-field>
     </div>
     <div class="col-12 col-md-6">
       <mat-form-field [floatLabel]="'always'" appearance="outline" class="w-100">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="proposedCompletionDate">
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [matDatepicker]="proposedCompletionDate" formControlName="proposedCompletionDate">
+        <mat-datepicker-toggle matIconSuffix [for]="proposedCompletionDate"></mat-datepicker-toggle>
+        <mat-datepicker #proposedCompletionDate></mat-datepicker>
       </mat-form-field>
     </div>
   </div>
