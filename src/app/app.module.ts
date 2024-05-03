@@ -19,6 +19,7 @@ import { ChecklistComponent } from './components/state-owned-land-application/ch
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsyncPipe } from '@angular/common';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { LandsAppRootComponent } from './components/state-owned-land-application/lands-app-root/lands-app-root.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     QuestionsListComponent,
     ApplicationFeeComponent,
     ChecklistComponent,
-    LandApplicationStepperComponent
+    LandApplicationStepperComponent,
+    LandsAppRootComponent
   ],
   imports: [
     BrowserModule,
