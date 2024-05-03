@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { customEmailValidator } from '../../../../shared/validators';
 
 @Component({
   selector: 'app-contact-info',
@@ -19,7 +20,7 @@ export class ContactInfoComponent {
     country: ['', Validators.required],
     homePhone: ['', Validators.required],
     busPhone: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.email, customEmailValidator()]],
     preferredMethodOfContact: ['', Validators.required]
   });
 

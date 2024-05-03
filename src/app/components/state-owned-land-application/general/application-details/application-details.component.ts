@@ -9,11 +9,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ApplicationDetailsComponent {
   form = this._formBuilder.group({
     category: ['', Validators.required],
-    typeOfApplication: ['permit', Validators.required],
-    applicationNumber: ['', Validators.required],
-    submissionDate: ['', Validators.required],
-    proposedStartDate: ['', Validators.required],
-    proposedCompletionDate: ['', Validators.required],
+    typeOfApplication: ['', Validators.required],
+    applicationNumber: [''],
+    submissionDate: [''],
+    proposedStartDate: [''],
+    proposedCompletionDate: [''],
   });
 
   applicationTypes = [{
