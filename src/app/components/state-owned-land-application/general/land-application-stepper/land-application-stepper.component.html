@@ -2,7 +2,6 @@
 <section class="bg-white stepper-container">
 <mat-stepper
   class="land-app-stepper"
-  [linear]="true"
   [orientation]="(stepperOrientation | async)!">
   <mat-step [stepControl]="applicationDetailsForm" label="Application Details">
     <app-application-details/>
