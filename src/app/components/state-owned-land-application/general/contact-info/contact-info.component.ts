@@ -19,7 +19,7 @@ export class ContactInfoComponent {
     country: ['', Validators.required],
     homePhone: ['', Validators.required],
     busPhone: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
     preferredMethodOfContact: ['', Validators.required]
   });
 
